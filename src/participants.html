@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.css" />
+    <title>Participantes - Sonido Reciclado</title>
+  </head>
+  <body>
+    <include src="./views/header.html"></include>
+
+    <main class="min-h-screen">
+      <div class="max-w-7xl mx-auto py-12 px-4">
+        <header class="page-header">
+          <h1 class="page-title">Conoce a Nuestros Participantes</h1>
+          <p class="page-subtitle">
+            Artistas, talleristas y expertos que forman parte de estas jornadas.
+          </p>
+        </header>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+        >
+          <!-- Participante 1 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/ana-perez.webp",
+              "alt": "Foto de Ana Pérez",
+              "name": "Ana Pérez",
+              "role": "Luthier Experimental",
+              "description": "Ana transforma objetos cotidianos en instrumentos musicales únicos, explorando nuevas sonoridades y promoviendo la reutilización creativa."
+            }'
+          ></include>
+
+          <!-- Participante 2 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/carlos-lopez.webp",
+              "alt": "Foto de Carlos López",
+              "name": "Carlos López",
+              "role": "Músico Electrónico Circular",
+              "description": "Carlos compone utilizando exclusivamente equipos reciclados y software de código abierto, demostrando que la sostenibilidad puede impulsar la innovación musical."
+            }'
+          ></include>
+
+          <!-- Participante 3 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/sofia-gomez.webp",
+              "alt": "Foto de Sofía Gómez",
+              "name": "Sofía Gómez",
+              "role": "Educadora Musical y Ambientalista",
+              "description": "Sofía imparte talleres sobre cómo la música puede ser una herramienta para la concienciación ambiental, enseñando a construir instrumentos con materiales reciclados."
+            }'
+          ></include>
+
+          <!-- Participante 4 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/david-ruiz.webp",
+              "alt": "Foto de David Ruiz",
+              "name": "David Ruiz",
+              "role": "Investigador en Acústica Sostenible",
+              "description": "David investiga el impacto acústico de los materiales reciclados y cómo pueden ser utilizados en la construcción de espacios musicales ecológicos."
+            }'
+          ></include>
+
+          <!-- Participante 5 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/laura-vicente.webp",
+              "alt": "Foto de Laura Vicente",
+              "name": "Laura Vicente",
+              "role": "Consultora en Sostenibilidad de Eventos",
+              "description": "Laura ofrecerá una charla sobre \"Festivales Verdes: Hacia un Impacto Cero\". Explorará estrategias prácticas para reducir la huella ecológica de los grandes eventos musicales, desde la gestión de residuos hasta el uso de energías renovables."
+            }'
+          ></include>
+
+          <!-- Participante 6 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/marcos roca.webp",
+              "alt": "Foto de Marcos Roca",
+              "name": "Marcos Roca",
+              "role": "Productor y Activista Open Source",
+              "description": "En su taller \"Remixea, Reutiliza, Recicla: El Audio como Recurso Compartido\", Marcos argumentará cómo liberar música para sampleo o pistas separadas fomenta una economía circular creativa, reduciendo la necesidad de generar constantemente nuevo material desde cero."
+            }'
+          ></include>
+
+          <!-- Participante 7 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/elena-torres.webp",
+              "alt": "Foto de Elena Torres",
+              "name": "Elena Torres",
+              "role": "Técnica de Sonido y Minimalista Digital",
+              "description": "Elena presentará \"Menos es Más: Deshazte del Gear Innecesario\". Una charla sobre la importancia de no acumular equipos musicales en desuso, como amplificadores o pedales, y cómo fomentar su reparación, donación o reciclaje adecuado."
+            }'
+          ></include>
+
+          <!-- Participante 8 -->
+          <include
+            src="./views/participant-card.html"
+            locals='{
+              "image": "./assets/images/participants/javier-soler.webp",
+              "alt": "Foto de Javier Soler",
+              "name": "Javier Soler",
+              "role": "Entusiasta del DIY Electrónico",
+              "description": "Javier dirigirá un taller práctico sobre \"Repara y Personaliza tu Equipo\". Enseñará técnicas básicas de soldadura y diagnóstico para dar una segunda vida a pedales de efectos y pequeños sintetizadores, promoviendo la cultura de la reparación."
+            }'
+          ></include>
+        </div>
+      </div>
+
+      <p class="text-gray-400 text-right p-3">
+        <small>* Imágenes de participantes por Freepik.com</small>
+      </p>
+    </main>
+
+    <include src="./views/footer.html"></include>
+    <script type="module" src="./assets/scripts/main.js"></script>
+  </body>
+</html>

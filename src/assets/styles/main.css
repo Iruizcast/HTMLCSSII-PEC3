@@ -1,0 +1,199 @@
+/**
+ * Use this file to import partials.
+ * Do not include SCSS code in this file.
+ */
+
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Definir colores personalizados con @theme */
+@theme {
+  --color-primary: #f00;
+  --color-black-custom: #000;
+  --color-white-custom: #fff;
+  --color-gray-custom-600: #6c757d;
+  --color-gray-custom-700: #495057;
+  --color-gray-custom-800: #343a40;
+
+  --font-custom-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Estilos base del body */
+body {
+  @apply bg-black-custom text-white-custom font-custom-sans;
+}
+
+.participant-card {
+  @apply h-full flex flex-col;
+}
+
+.participant-card-image {
+  @apply w-full border-b border-r border-primary;
+  height: auto;
+}
+
+.participant-card-body {
+  @apply p-6 flex flex-col flex-grow;
+}
+
+.participant-card-title {
+  @apply text-xl font-semibold text-primary mb-2;
+}
+
+.participant-card-subtitle {
+  @apply text-sm mb-3 text-gray-custom-600;
+}
+
+.participant-card-text {
+  @apply text-sm leading-relaxed mb-4 flex-grow;
+}
+
+.btn-primary-outline {
+  @apply inline-block self-start px-4 py-2 border border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-200;
+}
+
+.page-header {
+  @apply text-center mb-12;
+}
+
+.page-title {
+  @apply text-4xl lg:text-5xl text-primary mb-4;
+}
+
+.page-subtitle {
+  @apply text-lg;
+}
+
+.nav-link {
+  @apply text-white-custom no-underline px-3 py-2 hover:text-primary transition-colors duration-200;
+}
+
+.header__logo-img {
+  filter: invert(100%);
+  height: 65px;
+  width: auto;
+}
+
+.footer__logo-img {
+  height: 40px;
+  width: auto;
+}
+
+/* === ESTILOS ESPECÍFICOS DEL ARTÍCULO === */
+.article-hero-section {
+  min-height: 30vh;
+  background-image: url("../images/belinda-fewings-68HrHtqdiPE-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.article-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.3); /* Filtro rojizo original */
+}
+
+.hero-image-attribution {
+  font-size: 0.75rem;
+  /* Sin background color - como en el original */
+}
+
+.article-body {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-pull-quote {
+  border-left: 3px solid var(--color-primary);
+}
+
+.article-pull-quote q {
+  font-size: 1.25rem;
+  quotes: "" " " "";
+}
+
+.article-pull-quote q::before {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  margin-left: -0.5em;
+}
+
+.article-pull-quote q::after {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+.article-pull-quote footer {
+  font-size: 1rem;
+}
+
+.article-large-quote {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  quotes: "" " " "";
+}
+
+.article-large-quote q::before {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  margin-left: -0.5em;
+}
+
+.article-large-quote q::after {
+  font-family: "Georgia", "Times New Roman", Times, serif;
+}
+
+/* === LISTA SIMPLE COMO EN EL ORIGINAL === */
+.article-simple-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.article-simple-list li {
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1rem;
+}
+
+.article-simple-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* === CONTAINER QUERIES (RESPONSIVE AVANZADO) === */
+.intro-content-block {
+  container-type: inline-size;
+  container-name: intro-block;
+}
+
+.article-content {
+  container-type: inline-size;
+  container-name: article-content;
+}
+
+@container intro-block (max-width: 700px) {
+  .intro-content-block .article-pull-quote q {
+    font-size: 0.85rem;
+  }
+  .intro-content-block .article-pull-quote footer {
+    font-size: 0.75rem;
+  }
+  .intro-content-block .lg\\:col-span-8 p {
+    font-size: 0.95rem;
+  }
+}
+
+@container article-content (max-width: 700px) {
+  .article-content .article-large-quote {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
